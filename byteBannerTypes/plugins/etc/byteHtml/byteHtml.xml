@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href=""?>
+
+<plugin>
+    <name>byteHtml</name>
+    <creationDate>2013-08-30</creationDate>
+    <author>Byte Internet</author>
+    <authorEmail>servicepanel@byte.nl</authorEmail>
+    <authorUrl>http://www.byte.nl</authorUrl>
+    <license>license.txt</license>
+    <description>Byte Banner Type Plugins for OpenX</description>
+    <version>1.0.0</version>
+    <oxversion>2.7.30-beta-rc11</oxversion>
+    <extends>bannerTypeHtml</extends>
+
+    <install>
+        <files>
+            <file path="{MODULEPATH}bannerTypeHtml/byteHtml/">genericHtml.class.php</file>
+            <file path="{MODULEPATH}bannerTypeHtml/byteHtml/">genericHtml.delivery.php</file>
+        </files>
+
+        <components>
+           <component>
+                <name>genericHtml</name>
+           </component>
+        </components>
+
+    </install>
+
+</plugin>
