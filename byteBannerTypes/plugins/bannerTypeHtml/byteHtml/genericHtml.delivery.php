@@ -30,6 +30,9 @@ function Plugin_bannerTypeHtml_byteHtml_genericHtml_Delivery_adRender(&$aBanner,
         // Use ##varname## to replace in URLs
         $patterns[] = "##$k##";
         $replacements[] = urlencode($v);
+        // Also replace urlencoded patterns to fix urls that are modified by clicktracking code
+        $patterns[] = urlencode("##$k##");
+        $replacements[] = urlencode($v);
     }
     $code = str_replace($patterns, $replacements, $code);
 
